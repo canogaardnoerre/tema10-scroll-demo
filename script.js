@@ -1,8 +1,12 @@
+let frame = 0;
+
 window.addEventListener('wheel', (event) => {
     // event.deltaY;
     let prodElement = document.querySelector('.demo-prod');
-    prodElement.style.cssText = "border: 10px solid pink";
-    
+    prodElement.style.cssText = "background-position-x: calc("+ Math.floor(frame) +" * -605px);";
+    frame += 0.1;
+    if(frame > 3) frame = 0;
+
 });
 
 

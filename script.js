@@ -13,7 +13,13 @@ window.addEventListener('wheel', (event) => {
 
 orderButton.addEventListener('click', (event) => {
     console.log('Bestilt kaffe');
+    gtag('event', 'Order Click', {
+        'event_category': 'order test',
+        'event_label': 'order event happened',
+      });
 });
+
+
 
 
 
